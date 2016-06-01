@@ -5,6 +5,11 @@ public class Store {
 
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
+    BufferedWriter writer = null;
+    String fileOut = "reciept.txt";
+    File logFile = new File(fileOut);
+    writer = new BufferedWriter(logFile);
+     
     System.out.println("Welcome to my fancy store!");
   
     ArrayList<String[]> store = read();
@@ -21,12 +26,13 @@ public class Store {
     
       if (choice == 0 || choice == 1 || choice == 2 || choice == 3 || choice == 4) {
         total += Integer.parseInt(store.get(choice)[1]);
+	writer.write(store.get(choice)[0]);
       }
 
     }
-
+    writer.write("Your total is: " + total);
     System.out.println("Your total is: " + total);
-
+    writer.close();
   }
 
     public static ArrayList<String[]> read() {
