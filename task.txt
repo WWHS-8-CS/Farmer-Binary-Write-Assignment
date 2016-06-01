@@ -1,0 +1,16 @@
+You are the programmer who owns a store in middle nowhere USA and you have many famers coming to your store.
+ 
+1.      Create a main Menu that is going to reside on the tester program.
+All the others programs are doing to be different modular that you will call in the main tester to produce a receipt for your customer.
+ 
+2.      Begin by creating an inventory of items that you sell in your store and put it in a text file.
+3.      When a customer visits your store you call the main menu and have a greeting displayed for your customers and choices.
+a.       Welcome to  my-------------------------------- have your fancy name printed
+b.      What would you like to buy today
+                                                    i. 	Canned goods (Read from your text file)
+                                                   ii. 	Produce
+                                                  iii. 	Dairy products
+                                                  iv. 	Meats
+                                                   v. 	Farm equipment etc
+4.      Ones the customer has made the choice and you read the items from your text file then calculate the amount don’t have them buy only one item, they live In the middle of nowhere USA so they don’t get to visit the store which is 300 miles away from them that often.  Tell them what they have bought and the amount, give them the opportunity to buy more or return items if they did not have enough money to pay for everything.
+5.      Thank the customer and have the receipt produced in text format not on the console which them well and ask them to come again.

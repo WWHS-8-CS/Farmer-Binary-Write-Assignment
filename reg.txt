@@ -1,0 +1,5 @@
+Canned Goods,3
+Bags of Produce,5
+Dairy Products,7
+Meats,10
+Farm Tools,100
