@@ -5,10 +5,10 @@ public class Store {
 
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-    BufferedWriter writer = null;
     String fileOut = "reciept.txt";
-    File logFile = new File(fileOut);
-    writer = new BufferedWriter(logFile);
+    try {
+    FileWriter fileWriter = new FileWriter(fileOut);
+    BufferedWriter writer = new BufferedWriter(fileWriter);
      
     System.out.println("Welcome to my fancy store!");
   
@@ -21,18 +21,28 @@ public class Store {
       System.out.println("What would you like to purchase?");
       printNames(store);
       System.out.println("");
-      System.out.println("Or, press 9 for a return or 10 to exit: "); 
+      System.out.println("Or, press 10 to exit: "); 
       choice = scan.nextInt();
     
       if (choice == 0 || choice == 1 || choice == 2 || choice == 3 || choice == 4) {
         total += Integer.parseInt(store.get(choice)[1]);
 	writer.write(store.get(choice)[0]);
+	writer.newLine();
       }
 
     }
+
     writer.write("Your total is: " + total);
     System.out.println("Your total is: " + total);
     writer.close();
+    }
+    catch(IOException ex) {
+            System.out.println(
+                "Error writing to file '"
+                + fileOut + "'");
+            // Or we could just do this:
+            // ex.printStackTrace();
+    }
   }
 
     public static ArrayList<String[]> read() {
